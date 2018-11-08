@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+int add(int n){
+int sum=0;
+  if(n==2)
+    return 3;
+  else
+      for(int i=1;i<=n;i++){
+        sum=sum+i;
+      }
+      return add(n-1)+sum;
+}
+using namespace std;
+int main(){
+  int num;
+  do {
+    cin>>num;
+    cout<<add(num)<<endl;
+  } while(num!=0);
+
+  return 0;
+}
